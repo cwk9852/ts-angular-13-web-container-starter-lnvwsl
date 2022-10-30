@@ -1,0 +1,23 @@
+<p>Angular enum issue (solved by fullTemplateTypeCheck)</p>
+
+<ng-container *ngFor="let csvKey of [kikCsvKeys.global, kikCsvKeys.country]">
+  <div>
+    <h2>Choose</h2>
+    <mat-radio-group
+      [ngModel]="stateOverrides[csvKey]"
+      (ngModelChange)="onStateOverrideChange($event, csvKey)"
+    >
+      <mat-radio-button *ngFor="let state of states" [value]="state">
+        {{ state }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+</ng-container>
+
+<hr />
+<h2>TOUR WIZARD</h2>
+<button class="" (click)="startTour()">Start tour</button>
+<hr />
+<any class="tour-wizard-text-gloria" tourWizardAnchor="FOO_1">MY ANCHOR 1 </any>
+<any class="tour-wizard-text-gloria" tourWizardAnchor="FOO_2">MY ANCHOR 2 </any>
+<any class="tour-wizard-text-gloria" tourWizardAnchor="FOO_3">MY ANCHOR 3</any>

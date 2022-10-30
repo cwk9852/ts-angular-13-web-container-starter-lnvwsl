@@ -1,0 +1,38 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "-kik-launch": ["dist/kik-launch"],
+      "kik-launch": ["projects/kik-launch/src/public-api"],
+      "kik-launch/*": ["projects/kik-launch/src/lib/*"]
+    },
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "strict": true,
+    "strictNullChecks": false,
+
+    "strictPropertyInitialization": false,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "target": "es2015",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"]
+  },
+  "angularCompilerOptions": {
+    "enableIvy": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "strictTemplates": true
+  }
+}
